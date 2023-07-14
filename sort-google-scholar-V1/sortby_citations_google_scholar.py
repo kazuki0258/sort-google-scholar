@@ -50,7 +50,7 @@ def get_author(content):
 # Update these variables according to your requirement
 keyword = "'non intrusive load monitoring'" # the double quote will look for the exact keyword,
                                             # the simple quote will also look for similar keywords
-number_of_results = 26300 # number of results to look for on Google Scholar
+number_of_results = 10000 # number of results to look for on Google Scholar
 save_database = False # choose if you would like to save the database to .csv
 path = 'C:/_wittmann/nilm_100_exact_author.csv' # path to save the data
 
@@ -64,8 +64,7 @@ citations = list()
 year = list()
 rank = list()
 author = list()
-rank = list(range(1, number_of_results + 1))
- # initialization necessary for incremental purposes
+rank.append(0) # initialization necessary for incremental purposes
 
 # Get content from 1000 URLs
 for n in range(0, number_of_results, 26300):    
