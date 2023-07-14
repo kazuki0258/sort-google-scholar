@@ -68,7 +68,7 @@ rank = list(range(1, number_of_results + 1))
  # initialization necessary for incremental purposes
 
 # Get content from 1000 URLs
-for n in range(0, number_of_results, 10):    
+for n in range(0, number_of_results, 26300):    
     url = 'https://scholar.google.com/scholar?start='+str(n)+'&q='+keyword.replace(' ','+')
     page = session.get(url)
     c = page.content
